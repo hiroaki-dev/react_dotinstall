@@ -7,7 +7,7 @@
 		// 暗黙的なanyをエラーにする
         "noImplicitAny": true,
 		// 生成するJavaScriptモジュールの形式
-        "module": "es2015",
+        "module": "commonjs",
 		// 生成するJavaScriptのバージョン
         "target": "es5",
 		// JSXの有効化
