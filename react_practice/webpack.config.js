@@ -8,16 +8,14 @@ module.exports = {
     devtool: "source-map",
     resolve: {
         // 解決可能な拡張子に'.ts'と'.tsx'を追加
-        extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
+        extensions: ["*", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
     },
     module: {
-        loaders: [
+        rules: [
             // '.ts'または'.tsx'の全てのファイルを、'awesome-typescript-loader'で扱う
-            { test: /\.tsx?$/, loader: "awesome-typescript-loader" }
-        ],
-        preLoaders: [
+            { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
             // '.js'の全てのファイルに、'source-map-loader'によて予め処理されたsourcemapsを持たせる
-            { test: /\.js$/, loader: "source-map-loader" }
+            { test: /\.js$/, enforce: "pre", loader: "source-map-loader" }
         ]
     },
     // インポートしたモジュールのパスが下記のいずれかにマッチする場合、
