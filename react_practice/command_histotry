@@ -1,1 +1,4 @@
 npm install --save-dev webpack webpack-cli typescript awesome-typescript-loader source-map-loader
+
+npm install --save react react-dom
+npm install --save-dev @types/react @types/react-dom
