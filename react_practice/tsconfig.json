@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+		// 出力先ディレクトリ
+        "outDir": "./dist/",
+		// ソースマップ生成の有無()
+        "sourceMap": true,
+		// 暗黙的なanyをエラーにする
+        "noImplicitAny": true,
+		// 生成するJavaScriptモジュールの形式
+        "module": "es2015",
+		// 生成するJavaScriptのバージョン
+        "target": "es5",
+		// JSXの有効化
+        "jsx": "react"
+    },
+    "include": [
+        "./src/**/*"
+    ]
+}
